@@ -41,5 +41,5 @@ http.createServer((peticion, respuesta) => {
         }
         servirFichero(respuesta, join(__dirname, "404.html"), tipo("html"), 404);
     });
-
-}).listen(4000);
+//Si tienes una variable de entorno llamada PORT usala y si no usa 4000
+}).listen(process.env.PORT || 4000);
